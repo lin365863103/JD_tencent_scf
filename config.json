@@ -1,5 +1,5 @@
 {
-    "jd_nhs_rp": [0,10,20],
+    "jd_nhs_rpa": [0, 20],
     "jd_m_sign":[0],
     "jd_computer": [0],
     "jd_nh_sign":[2, 23],
@@ -48,6 +48,7 @@
     "jd_wsdlb": [6, 12, 18],
     "jd_z_health_energy": [6, 8, 10, 12, 14, 16, 18, 20, 22],
     "jd_zjb": [7],
+    "jd_ttysq":[10,13],
     "jd_zsign":[10],
     "jd_sxLottery":[10],
     "jd_genz":[13],

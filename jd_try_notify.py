@@ -66,7 +66,7 @@ def printf(text):
 def get_remarkinfo():
     url='http://127.0.0.1:5600/api/envs'
     try:
-        with open(os.getcwd().replace('scripts','config')+'/auth.json', 'r') as f:
+        with open('/ql/config/auth.json', 'r') as f:
             token=json.loads(f.read())['token']
         headers={
             'Accept':'application/json',
@@ -133,6 +133,9 @@ if __name__ == '__main__':
         cks = re.findall(r'Cookie[0-9]*="(pt_key=.*?;pt_pin=.*?;)"', f.read())
         f.close()
     for ck in cks:
+        ck = ck.strip()
+        if ck[-1] != ';':
+            ck += ';'
         ptpin = re.findall(r"pt_pin=(.*?);", ck)[0]
         try:
             if remarkinfos[ptpin]!='':
